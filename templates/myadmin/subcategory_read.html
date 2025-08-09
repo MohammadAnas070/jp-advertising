@@ -1,0 +1,41 @@
+{% extends 'myadmin/common/layout.html' %}
+{% block content %}
+{% load static %}
+
+ <title>JpAdvertisings | View-Sub-Categories </title>       
+<div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="bg-secondary rounded h-100 p-4">
+                            <h6 class="mb-4">Sub-Categories</h6>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">id</th>
+                                            <th scope="col">Category Name</th>
+                                            <th scope="col">Category Id</th>
+                                            <th scope="col">Delete</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                      {% for row in result %}
+                                    <tr>
+                                        <td>{{row.id}}</td>
+                                        <td>{{row.subcategory_name}}</td>
+                                        <td>{{row.category_id}}</td>
+                                        <td><a href="/myadmin/subcategory_delete/{{row.id}}">Delete</a></td>
+                                        <!-- <td><a href="/myadmin/subcategory_edit/{{row.id}}">Edit</a></td> -->
+                                    </tr>
+                                    {% endfor %}
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <br><br><br><br><br><br><br><br><br><br><br>
+            
+       
+                    {% endblock %}

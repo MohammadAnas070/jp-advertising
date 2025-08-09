@@ -1,0 +1,28 @@
+<table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">User_id</th>
+                                            <th scope="col">Product Name</th>
+                                             <th scope="col">Title</th>
+                                              <th scope="col">Price</th>
+                                                <th scope="col">View More</th>
+                                                <th scope="col">Delete</th>
+                                              
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for row in result %}
+                                        <tr>
+                                            <td>{{row.id}}</th>
+                                            <td>{{row.productname}}</td>
+                                            <td>{{row.title}}</td>
+                                            <td>{{row.price}}</td>
+                                            
+                                            <td><a href="/myadmin/viewmore_all_product/{{row.id}}">view more</a></td>
+                                            <td><a href="/myadmin/view_delete/{{row.id}}">delete</a></td>
+                                            </tr>
+                                        {% endfor %}
+             
+                                    </tbody>
+                                </table>

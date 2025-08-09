@@ -1,0 +1,169 @@
+ {% extends 'user/common/layout2.html' %}
+ {% block content %}
+
+
+{% load static %}
+<style type="text/css">
+  li 
+  {
+    color: #000000;
+  }
+</style>
+<title>JpAdvertisings | Registration </title>
+ <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center img1">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>Registration</h2>
+        
+      </div>
+    </div>
+    <br>
+    <br>
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Page</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'user/login1/css/bootstrap.min.css' %}">
+
+  <script type="text/javascript" src="{% static 'user/login1/js/jquery-3.6.2.min.js' %}"></script>
+
+  <script type="text/javascript" src="{% static 'user/login1/js/bootstrap.min.js' %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'user/css/demo3.css' %}">
+
+  <section class="h-100 gradient-form">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10">
+        <div class="card rounded-3 text-black">
+          <div class="row g-0">
+            <div class="col-lg-9">
+              <div class="card-body p-md-5 mx-md-4">
+
+                <div class="text-center">
+                  <!-- <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                     style="width: 185px;" alt="logo">-->
+                  <h4 class="mt-1 mb-5 pb-1">Please Register Here | JP Advertisings</h4>
+                </div>
+
+
+                <form action="/user/user_store" method="post">
+                  {% csrf_token %}
+                  <div class="form-row" >
+
+                  <div class=" form-group mb-2 col-6">
+                    <label class="form-label" for="form2Example11">First Name</label>
+                    <input type="text" id="fname"required name="fname" class="form-control" />
+                    
+                  </div>
+
+                  <div class="form-group mb-2 col-6">
+                    <label class="form-label" for="form2Example11">Last Name</label>
+
+                    <input type="text" id="lname" required name="lname" class="form-control" />
+                  </div>
+
+                  <div class="form-group col-12">
+                      <label id="State">Email &nbsp; &nbsp;</label>
+                      <input type="email"required name="email" class="form-control">
+                  </div>
+
+                  <div class="form-group col-6">
+                      <label id="State">UserName&nbsp; &nbsp;</label>
+                      <input type="text" required id="username" name="username" class="form-control">
+                  </div>  
+
+                  <div class="form-group col-6">
+                      <label id="State">Contact No &nbsp; &nbsp;</label>
+                      <input type="tel" pattern="[0-9]{10}" required name="contact" placeholder="Enter mobile no (10 digits only)" class="form-control">
+                  </div>
+
+                  <div class="form-group col-6">
+                      <label id="State">Gender &nbsp; &nbsp;</label>
+                      <select class="form-control" id="gender" name="gender" required >
+                      <option id="not selected State" disabled>--Select Gender--</option>
+                      <option id="male" selected>Male</option>
+                      <option id="female">Female</option>
+                    </select>
+                  </div>
+
+
+                    <div class="form-group col-6">
+                      <label id="State">Date Of Birth &nbsp; &nbsp;</label>
+                      <input type="date" id="dob" name="dob" required class="form-control">
+                  </div>
+
+                   
+
+
+                   
+                   <div class="form-group col-12">
+                      <label id="State">Address&nbsp; &nbsp;</label>
+                      <textarea class="form-control" id="address" name="address" ></textarea>
+                  </div>
+
+
+                  
+
+
+                  <div class="form-group col-6">
+                      <label id="State">Password&nbsp; &nbsp;</label>
+                      <input type="password" id="password" name="password" class="form-control" required>
+                  </div>
+
+
+
+                  <div class="form-group col-6">
+                      <label id="State">Confirmed Password&nbsp; &nbsp;</label>
+                      <input type="password" id="cpassword" name="cpassword" class="form-control" required>
+                  </div>
+
+                </div>
+                <br>
+
+
+                {% if messages %}
+<ul class="messages" style="color: darkred;">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}" {% endif %} > {{ message }} </li>
+    {% endfor %}
+</ul>
+{% endif %}
+                  
+
+                  
+
+                  <div class="text-center pt-1 mb-5 pb-1">
+                    <input class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" id="submit" name="sumbit" value="submit">
+                    
+                  </div>
+
+                  <div class="d-flex align-items-center justify-content-center pb-4">
+                    <p class="mb-0 me-2">Do you have an account? &nbsp;</p>
+                    <button type="button" class="btn btn-outline-danger" onclick="window.location.href='/user/';" >Login</button>
+                  </div>
+
+                </form>
+
+              </div>
+            </div>
+            <div class="col-lg-3 d-flex align-items-center gradient-custom-2">
+              <div class="text-white px-3 py-2 p-md-2 mx-md-2">
+                <h4 class="mb-4">We are more than just a company</h4>
+                <!-- <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+  
+{% endblock %}

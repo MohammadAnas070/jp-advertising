@@ -1,0 +1,68 @@
+ {% extends 'myadmin/common/layout.html'%}
+{% block content %}
+{% load static %}
+<title>JpAdvertisings | FeedBack </title>
+<style type="text/css">
+    #a1
+    {
+        color: blue;
+    }
+    #a2
+    {
+        color: #ffffff;
+    }
+</style>
+ 
+ 
+            <!-- Navbar Start -->
+
+            <!-- Navbar End -->
+
+
+            <!-- Table Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                  
+                    <div class="col-xl-12">
+                        <div class="bg-secondary rounded h-100 p-4">
+                            <h6 class="mb-4">Customer Feedback</h6>
+                            <table class="table table-hover">
+                                <tr>
+        
+        <td>Feedback id</td>
+        <td>Date</td>
+        <td>Message</td>
+        <td>User id</td>
+        <!-- <td>Delete</td> -->
+        
+    </tr>
+    {% for row in result %}
+    <tr>
+        <td>{{row.id}}</td>
+        <td>{{row.date}}</td>
+        <td>{{row.message}}</td>
+        <td>{{row.user_id}}</td>
+        <!-- <td><a href="/user/feedback_delete/{{row.id}}" id="a1">delete</a></td> -->
+        </tr>
+    {% endfor %}
+          
+                            </table>
+                        </div>
+                    </div>
+
+                   
+                    </div>
+                </div>
+            <!-- Table End -->
+
+
+            <!-- Footer Start -->
+            
+            <!-- Footer End -->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br>
+
+        
+        
+
+{% endblock %}

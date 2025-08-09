@@ -1,0 +1,153 @@
+ {% extends 'user/common/layout2.html' %}
+ {% block content %}
+
+{% load static %}
+
+<title>JpAdvertisings | Login </title>
+  <link rel="stylesheet" type="text/css" href="{% static 'user/login1/css/bootstrap.min.css' %}">
+
+  <style >
+
+    li
+    {color: #fff}
+  .img1
+  {
+    background-image: url("{% static 'user/images/contactus.jpg'  %}");
+  }
+
+  section
+  {
+    background-image: url("{% static 'user/images/wall.jpeg'  %}");
+    
+  }
+  .card:hover
+  {
+    box-shadow: 0px 20px 35px #252525;
+  }
+  #main
+  {
+    background-color: transparent;
+  }
+  .gradient-custom-2 {
+/* fallback for old browsers */
+background: #fccb90;
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, #fff, #ffd800, #fff, #ffd800);
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, #ff0000, #ff3c3c, #ffd800, #fff77d);
+}
+
+@media (min-width: 768px) {
+.gradient-form {
+
+}
+}
+@media (min-width: 769px) {
+.gradient-custom-2 {
+border-top-right-radius: .3rem;
+border-bottom-right-radius: .3rem;
+}
+}
+.card
+{
+  background-color: #252525;
+}
+</style>
+{% load static %}
+  
+
+ <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center img1">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>Change Password</h2>
+        
+      </div>
+    </div>
+    <br>
+    <br>
+  
+  <section class="h-100 gradient-form " >
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10">
+        <div class="card rounded-3 text-black">
+          <div class="row g-0">
+            <div class="col-lg-6">
+              <div class="card-body p-md-5 mx-md-4">
+
+                <div class="text-center">
+                  <img src="{% static 'user/images/jp.png' %}"
+                    style="width: 185px;" alt="logo">
+                    <br>
+                    <br>
+                  <h4 class="mt-1 mb-5 pb-1" style="color: #fff;">We are The Jp Advertise</h4>
+                  <br>
+                </div>
+
+              <form action="/user/ChangePassword_chk" method="post">
+                  {% csrf_token %}
+                  <p style="color: #fff;">Please login to your account</p>
+                  <br>
+
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example11" style="color: #fff;">Username</label>
+                    <input type="text" id="username" name="username" class="form-control"
+                      placeholder="Enter Username" required />
+                    
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example22" style="color: #fff;">Password</label>
+                    <input type="password" placeholder="Enter Password" id="password" name="password" class="form-control" required />
+                    
+                  </div>
+                   <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example22" style="color: #fff;">Confirm Password</label>
+                    <input type="password" placeholder="Enter Password" id="cpassword" name="cpassword" class="form-control" required />
+                    
+                  </div>
+                 
+                  {% if messages %}
+<ul class="messages" style="color: darkred;">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+                  <div class="text-center pt-1 mb-5 pb-1">
+                    <input class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" id="submit" name="submit">
+                    
+                  </div>
+
+                  
+                  
+                </form>
+
+              </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+              <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                <h4 class="mb-4">We are more than just a company</h4>
+                <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+<br>
+
+
+  
+{% endblock %}

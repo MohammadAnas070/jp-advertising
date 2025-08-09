@@ -1,0 +1,128 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+<style type="text/css">
+  .input-group {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #007bff;
+}
+
+ 
+</style>
+
+<header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <!-- <a href="index.html" class="logo d-flex align-items-center"> -->
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="logo d-flex align-items-center" style="color:white">JP Advertisings</h1>
+      <!-- </a> -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="/user/home">Home</a></li>
+          <li><a href="/user/aboutus">About Us</a></li>
+          <li><a href="/user/category">Category</a></li>
+          {% if request.user.is_authenticated %}
+      <li><a href="/user/logout">logout</a></li>
+    
+    <li><a href="/user/contact">Contact</a></li>
+    <li><a href="/user/feedback">Feedback</a></li>
+      <li><a href="/user/profile/{{user.id}}">Profile</a></li>
+         
+    {% else %}
+
+      <li><a href="/user/register">Register</a></li>
+      
+      <ul>
+              <li class="dropdown"><a href="#"><span>Login</span> <i
+                    class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="/user/">Login as a User</a></li>
+                  <li><a href="/myadmin/">Login as a Admin</a></li>
+                  
+                </ul>
+              </li>
+            </ul>
+          
+    {% endif %}
+     <div class="container mt-3">
+    <div class="row justify-content-center">
+      <!-- <div class="col-md-6">
+        <form class="search-bar" action="/user/search" method="post">
+          {% csrf_token %}
+          
+            <input type="text" class="form-control" name="search" placeholder="Search...">
+        
+         
+          <button type="submit" class="btn">Search</button>
+        </form>
+      </div> -->
+    </div>
+ </div>
+  
+
+
+    
+    
+        </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header>
+
+
+<style>
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background-color: #f1f1f1;
+      padding: 10px;
+      border-radius: 20px;
+      height: 50px;
+      width: 200px;
+    }
+    
+    .search-bar input[type="text"] {
+      padding: 8px;
+      border: none;
+      width: 100%;
+      font-size: 16px;
+      background-color: #f1f1f1;
+      margin-right: 10px;
+      height: 50px;
+      width: 200px;
+    }
+    
+    .search-bar button {
+      padding: 8px 12px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+  </style>

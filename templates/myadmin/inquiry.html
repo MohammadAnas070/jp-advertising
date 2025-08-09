@@ -1,0 +1,62 @@
+{% extends 'myadmin/common/layout.html' %}
+{% block content %}
+{% load static %}
+
+ <title>JpAdvertisings | Inquiries </title>       
+<div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="bg-secondary rounded h-100 p-4">
+                            <h6 class="mb-4">Inquiries</h6>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First Name</th>
+                                            <th scope="col">Last Name</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Contact</th>
+                                            <th scope="col">Message</th>
+                                            <th scope="col">Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>jhon@email.com</td>
+                                            <td>7575851380</td>
+                                            <td>hello world</td>
+                                            <td>3/10/2020</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>mark@email.com</td>
+                                            <td>6354621866</td>
+                                            <td>welcome to my site </td>
+                                            <td>11/12/2022</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                        <td>jacob@email.com</td>
+                                            <td>9714197978</td>
+                                            <td>welcome to bazar</td>
+                                            <td>12/1/2023</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <br><br><br><br><br><br><br><br><br><br><br>
+            
+       
+                    {% endblock %}

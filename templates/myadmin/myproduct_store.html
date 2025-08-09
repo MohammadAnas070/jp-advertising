@@ -1,0 +1,186 @@
+{% extends 'myadmin/common/layout.html'%}
+{% block content %}
+{% load static %}
+
+<title>JpAdvertisings | My-Product</title>
+  
+<style >
+  .img1
+  {
+    background-image: url("{% static 'user/assets/img/a2.jpg'  %}");
+  }
+
+   body{margin-top:20px;
+background-color:#f2f6fc;
+color:#69707a;
+}
+.img-account-profile {
+    height: 10rem;
+}
+.rounded-circle {
+    border-radius: 50% !important;
+}
+.card {
+    box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
+}
+.card .card-header {
+    font-weight: 500;
+}
+.card-header:first-child {
+    border-radius: 0.35rem 0.35rem 0 0;
+}
+.card-header {
+    padding: 1rem 1.35rem;
+    margin-bottom: 0;
+    background-color: rgba(33, 40, 50, 0.03);
+    border-bottom: 1px solid rgba(33, 40, 50, 0.125);
+}
+.form-control, .dataTable-input {
+    display: block;
+    width: 100%;
+    padding: 0.875rem 1.125rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #69707a;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #c5ccd6;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.35rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.nav-borders .nav-link.active {
+    color: #0061f2;
+    border-bottom-color: #0061f2;
+}
+.nav-borders .nav-link {
+    color: #69707a;
+    border-bottom-width: 0.125rem;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.back{
+    background-color: #252525;
+
+}
+@media (min-width: 1025px) {
+.h-custom {
+height: 100vh !important;
+}
+}
+p,h5{
+
+    color: blue;
+}
+</style>
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+        <div class="container-xl px-4 mt-4 back">
+    <!-- Account page navigation-->
+    <nav class="nav nav-borders">
+       
+        <a class="nav-link " href="/myadmin/admin_upload_product/{{user.id}}">Upload Product</a>
+        <a class="nav-link " href="/myadmin/myproduct/{{user.id}}">My Product</a>
+        
+    </nav>
+    <hr class="mt-0 mb-4">
+
+<section class="h-100 h-custom" style="background-color: #eee;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <div class="card">
+          <div class="card-body p-4">
+
+            <div class="row">
+
+              <div class="col-lg-12">
+                <h5 class="mb-3"><a href="#!" class="text-body"><i
+                      class="fas fa-long-arrow-alt-left me-2"></i>Continue shopping</a></h5>
+                <hr>
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                  
+                  <div>
+                    <p class="mb-0"><span class="text-muted">Sort by:</span> <a href="#!"
+                        class="text-body">price <i class="fas fa-angle-down mt-1"></i></a></p>
+                  </div>
+                </div>
+
+                <div class="card mb-3">
+                  
+                </div>
+                {% for row in result %}
+
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div class="d-flex flex-row align-items-center">
+                        <div>
+                          <img
+                            src="/media/upload/{{row.image}}"
+                            class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                        </div>
+                        <div class="ms-3">
+                          <h5>{{row.productname}}</h5>
+                          <p class="small mb-0">{{row.title}}</p>
+                          
+                        </div>
+
+                      </div>
+                       <div class="ms-3">
+                          <p class="small mb-0">{{row.largedes}}</p>
+                          
+                          <p class="small mb-0">{{row.contact}}</p>
+                          
+                        </div>
+                      
+                      <div class="d-flex flex-row align-items-center">
+                        <div style="width: 50px;">
+                          <p class="small mb-0">₹{{row.price}}</p>
+                        </div>
+                        <div style="width: 80px;">
+                          <h5 class="mb-0"></h5>
+                        </div>
+                        <a href="#!" style="color: #cecece;"><b><i class="fas fa-trash-alt text-danger"></i></b></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+
+               
+
+                
+
+              </div>
+
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+</div>
+</div>
+</main>
+
+{% endblock %}

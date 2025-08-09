@@ -1,0 +1,90 @@
+{% extends 'myadmin/common/layout.html'%}
+{% block content %}
+{% load static %}
+<title>JpAdvertisings | View-Product </title>
+<style type="text/css">
+    th
+    {
+        color: #fff;
+    }
+</style>
+
+<div class="container-fluid pt-4 px-4">
+	<br><br>
+                <div class="row g-4">
+                    <div class="col-10 m-auto">
+                        <div class="bg-secondary rounded h-100 p-4">
+                            <h4 class="mb-4">{{result.user.first_name}}</h4>
+                            <div class="table-responsive">
+                                <table class="table">
+                                <tbody> 
+                                    <tr>
+                                            <th scope="col">FIELDS</th>
+                                            <th>INFORMATION</th>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <td>{{result.id}}</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Product Name</th>
+                                            <td>{{result.productname}}</td>
+                                            
+                                        </tr>
+                                         <tr>
+                                            <th scope="col">title</th>
+                                            <td>{{result.title}}</td>
+                                            
+                                        </tr>
+                                        
+                                        <tr>
+                                            <th scope="col">Category</th>
+                                            <td>{{result.category}}</td>
+                                            
+                                        </tr>
+                                        
+                                        <tr>
+                                            <th scope="col">Sub_Category</th>
+                                            <td>{{result.subcategory}}</td>
+                                            
+                                        </tr>
+                                        
+                                        <tr>
+                                            <th scope="col">Price</th>
+                                            <td>{{result.price}}</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Description</th>
+                                            <td>{{result.description}}</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Largedes</th>
+                                            <td>{{result.largedes}}</td>
+                                            
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="col">Image</th>
+                                            <td><img src="/media/upload/{{result.image}}" height="200" width="200"></td>
+                                            
+                                        </tr>
+                                            
+                                    	
+                                        
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+             
+
+{% endblock %}

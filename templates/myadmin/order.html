@@ -1,0 +1,87 @@
+{% extends 'myadmin/common/layout.html' %}
+{% block content %}
+{% load static %}
+
+
+<div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="bg-secondary rounded h-100 p-4">
+                            <h6 class="mb-4">Order</h6>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Order_id</th>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">User_id</th>
+                                            <th scope="col">Amount</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">view details</th>
+                    
+                                            
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">51</th>
+                                            <td>12/12/22</td>
+                                            <td>1</td>
+                                            <td>14000</td>
+                                            <td>status</td>
+                                            <td>
+                <a href="/myadmin/cust3">view more</a>
+                <th scope="col"><a href="">edit</a></th>
+                <th scope="col"><a href="">delete</a></th>
+                </td>
+                
+                                            </tr>
+                                        <tr>
+                                            <th scope="row">52</th>
+                                            <td>12/12/22</td>
+                                            <td>2</td>
+                                            <td>18000</td>
+                                            <td>status</td>
+                                            <td>
+                <a href="/myadmin/cust3">view more</a>
+                <th scope="col"><a href="">edit</a></th>
+                <th scope="col"><a href="">delete</a></th>
+                </td>
+                
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">53</th>
+                                            <td>12/12/22</td>
+                                            <td>3</td>
+                                            <td>20000</td>
+                                            <td>status</td>
+                                            <td>
+                <a href="/myadmin/cust3">view more</a>
+                <th scope="col"><a href="">edit</a></th>
+                <th scope="col"><a href="">delete</a></th>
+                </td>
+                
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        <br>
+        <br>
+         <br>
+        <br>
+        <br>
+         <br>
+        <br>
+        <br>
+         <br>
+        <br>
+        <br>
+        
+        
+                    {% endblock %}

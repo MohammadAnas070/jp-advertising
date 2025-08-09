@@ -1,0 +1,96 @@
+{% extends 'user/common/layout2.html'%}
+{% block content %}
+
+{% load static %}
+
+<title>JpAdvertisings | About-Us </title>
+
+<style >
+  .img1
+  {
+    background-image: url("{% static 'user/images/addtocart2.jpg'  %}");
+  }
+</style>
+{% load static %}
+  
+
+ <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center img1">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>About_Us</h2>
+        <ol>
+          <li><a href="/user/home">Home</a></li>
+          <li>About-Us</a></li>
+        </ol>
+
+      </div>
+    </div>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<style type="text/css">
+		body {
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: #333;
+}
+
+header a {
+	color: #fff;
+}
+
+main {
+	padding: 50px 0;
+}
+
+h1 {
+	font-size: 36px;
+}
+p{
+	font-size: 15px;
+}
+img {
+	border-radius: 50%;
+}
+
+footer {
+	background
+
+	</style>
+
+<main>
+		<section class="container mt-5">
+			<div class="row">
+				<div class="col-md-6">
+					<h1>About Us</h1>
+					<p>	In our web application users spend less time compared to physical meeting with the advertiser.<br>
+	With The use of JP Advertisings users can communicate and manage transaction online without involving any third party.<br>
+	The Transactions are not limited to the close circle of buyer or seller. With the use of this platform user can sell anything at any time to anybody and anywhere.<br>
+	This platform provides Compatibility to both B2C and C2C Transactions.<br>
+	With the help of our web application user cannot wander for advertisement in the newspaper. Hence, they save travelling expensive cost.<br>
+	Because of our web application the user and the advertiser come on one platform and manage time for both. Hence, the manage time it means time flexible.<br>
+	Our system provides of an option like feedback.
+</p>
+					<p> Our team is made up of dedicated professionals who share a passion for innovation, creativity, and excellence. We are committed to staying at the forefront of our industry and continuously improving our products and services to better serve our customers.</p>
+					<p> At our core, we value honesty, integrity, and transparency. We strive to build lasting relationships with our customers by earning their trust and delivering on our promises.</p>
+				</div>
+				<div class="col-md-6">
+					<img src="{% static 'user/images/ecommerce.jpg' %}" class="img-fluid" alt="Company Image">
+				</div>
+			</div>
+		</section>
+	</main>
+	
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+{% endblock %}

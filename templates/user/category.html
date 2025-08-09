@@ -1,0 +1,276 @@
+ {% extends 'user/common/layout.html' %}
+ {% block content %}
+ {% load static %}
+ <title>JpAdvertisings | Category </title>
+<style >
+ .img2
+{
+  float: left;
+  
+}
+.dob
+{
+  padding: 10px;
+}
+
+td
+{
+  color:#000;
+  font-size: 15px;
+}
+.img
+{
+  border-radius: 15px;
+  border-bottom: 3px solid red;
+  height: 220px;
+  width: 350px;
+}
+.img:hover
+{
+  box-shadow: 0px 0px 30px #252525;
+}
+table
+{
+  height: 500px;
+  width: 360px;
+  text-align:justify-all;
+
+}
+body
+{
+  background-color: whitesmoke;
+}
+.categoryWrapperDiv{
+  display: flex;justify-content: space-between;text-align: center;
+}
+.categoryDivStyle{
+  border-radius: 20px;
+  border:1px solid red;
+  padding: 2rem;
+}
+.categoryDivStyle:active{
+  border-radius: 20px;
+  border:1px solid blue;
+  padding: 2rem;
+}
+.categoryDivStyle:focus{
+  border-radius: 20px;
+  border:1px solid blue;
+  padding: 2rem;
+}
+body{
+    background:#dcdcdc;
+    margin-top:20px;
+}
+.h-100 {
+    height: 100%!important;
+}
+
+.box-hover {
+    min-height: 210px;
+    position: relative;
+}
+
+.cover-background {
+    position: relative !important;
+    background-size: cover !important;
+    overflow: hidden !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.margin-30px-bottom {
+    margin-bottom: 30px;
+}
+
+.box-hover:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.76);
+    background: -webkit-linear-gradient(top, transparent, #000 116%);
+    background: linear-gradient(-180deg, transparent, #000 116%);
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+.ele
+{
+
+  background-image: url("{% static 'user/images/electronics.jpg'  %}");
+}
+
+.fur
+{
+  background-image: url("{% static 'user/images/furniture.jpg'  %}");
+}
+.cloth
+{
+  background-image: url("{% static 'user/images/cloth.jpeg'  %}");
+}
+.art
+{
+  background-image: url("{% static 'user/images/art.jpg'  %}");
+}
+.veh
+{
+  background-image: url("{% static 'user/images/veh.jpeg'  %}");
+}
+.book
+{
+  background-image: url("{% static 'user/images/book.jpg'  %}");
+}
+
+
+</style>
+<section>
+    <div class="container">
+        <div class="text-center margin-40px-bottom">
+            <h3 class="no-margin-bottom">Top-Categories</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 sm-margin-30px-bottom">
+                <div class="h-100">
+                    <a href="/user/category_electronics" class="card bg-img box-hover cover-background border-0 p-4 h-100 ele">
+                        <div class="mt-auto position-relative z-index-9">
+                            <h5 class="text-white">ELECTRONICS</h5>
+                            
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="row margin-30px-bottom">
+                    <div class="col-md-4 xs-margin-30px-bottom">
+                        <a href="/user/category_furniture" class="card bg-img box-hover cover-background border-0 p-4 fur" data-background="img/content/02.jpg">
+                            <div class="mt-auto position-relative z-index-9">
+                                <h5 class="text-white">FURNITURE</h5>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 xs-margin-30px-bottom">
+                        <a href="/user/category_clothes" class="card bg-img box-hover cover-background border-0 p-4 cloth" data-background="img/content/03.jpg">
+                            <div class="mt-auto position-relative z-index-9">
+                                <h5 class="text-white">CLOTHES</h5>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="/user/category_vehicles" class="card bg-img box-hover cover-background border-0 p-4
+                         veh " data-background="img/content/04.jpg" >
+                            <div class="mt-auto position-relative z-index-9">
+                                <h5 class="text-white">VEHICLES</h5>
+                                
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7 xs-margin-30px-bottom">
+                        <a href="/user/category_design_art" class="card bg-img box-hover cover-background border-0 p-4 art" data-background="img/content/05.jpg" >
+                            <div class="mt-auto position-relative z-index-9">
+                                <h5 class="text-white">DESIGN &amp; ART</h5>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/user/category_book" class="card bg-img box-hover cover-background border-0 p-4
+                         book" data-background="img/content/06.jpg" >
+                            <div class="mt-auto position-relative z-index-9">
+                                <h5 class="text-white">BOOKS</h5>
+                                
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="fashion_section">
+  <center>
+
+   <section id="contact" class="contact">
+        <h3 class="text-danger text-center">&nbsp; &nbsp; &nbsp; Jp Advertisings</h3>
+        <br>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+       
+
+        <div class="row gy-4 mt-1 m-auto holediv">
+
+
+            <div class="col-lg-12 contact" >
+          
+              <div class="row gy-4">
+                
+
+                  {% for row in result1 %}
+                <div class="col-lg-4 form-group" >
+
+   
+       <table border="0" cellpadding="20" cellspacing="0" style="background-color: #ececec; border-radius: 20px;">
+        <tr>
+          <td colspan="2"><img src="/media/upload/{{row.image}}" height="220" width="350" class="img"></td>
+        </tr>
+        <tr>
+          <td style="text-align: right">Name :</td>
+          <td style="text-align: left">{{row.productname}}</td>
+        </tr>
+        <tr>
+          <td style="text-align: right">Title :</td>
+          <td style="text-align: left">{{row.title}}</td>
+        </tr>
+         <tr>
+          <td style="text-align: right">Description :</td>
+          <td style="text-align: left">{{row.description}}</td>
+        </tr>
+         
+         <tr>
+          <td style="text-align: right; color: red; font-size: 18px; font-weight: bold;">Price :</td>
+          <td style="text-align: left">{{row.price}}</td>
+        </tr>
+         <tr>
+          
+          <td colspan="2" style="text-align: center"><a href="/user/product_view/{{row.id}}"><button class="btn btn-success" style="margin-bottom: 15px;"><i class="fa-solid fa-cart-shopping"></i>&nbsp; &nbsp;NEXT &nbsp; &nbsp;</button></a></td>
+        </tr>
+         
+       </table>
+     </div>
+  
+       {% endfor %}
+
+                 
+             
+
+      </div>
+
+
+    </section>
+</center>
+
+
+
+
+
+    <!-- ======= Contact Section=======-->
+         
+      </div>
+ 
+
+
+
+
+
+
+
+
+       
+
+{% endblock %}
